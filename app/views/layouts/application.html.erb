@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Routine</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<% flash.each do |message_type, message| %>
+  <center><div class="flash-message <%= message_type %>"><%= message %></div></center>
+<% end %>
+
+
+<%= yield %>
+
+</body>
+</html>
